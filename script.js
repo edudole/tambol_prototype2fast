@@ -232,7 +232,7 @@ function renderSettingMenus(items) {
       const isTeam = title.includes('บุคลากร') || title.includes('ทีมของเรา') || title === 'team';
       return !(isBestPractice || isTeam);
     })
-    .slice(0, 6);
+    ;
 
   if (!rows.length) {
     grid.innerHTML = '<div class="setting-menu-empty">ยังไม่มีข้อมูลเมนูใน setting!D2:F</div>';
@@ -253,6 +253,9 @@ function renderSettingMenus(items) {
       normalizedTitle === 'หลักสูตร';
     const isInnovation = normalizedTitle.includes('นวัตกรรม') ||
       normalizedTitle.includes('สื่อ/');
+    const isReport = normalizedTitle.includes('รายงานผลการปฏิบัติการ') ||
+      normalizedTitle.includes('ผลการปฏิบัติการ') ||
+      normalizedTitle === 'report';
     const href = isCourse
       ? 'course.html'
       : (isReward
