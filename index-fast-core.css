@@ -2110,6 +2110,7 @@ background: #ffffff;
 
 .announcement-line:hover { background: #06c755; }
 .announcement-facebook:hover { background: #1877f2; }
+.announcement-youtube:hover { background: #ff0000; }
 
 @media (max-width: 860px) {
   .announcement .announcement-inner {
@@ -4742,3 +4743,8 @@ body:not(.admin-edit-mode) .boss-carousel .boss-box-toolbar { display:none; }
   .home-summary-card { min-height: 112px; }
 }
 
+
+/* announcement organization link -> Chiang Klang website */
+.announcement #announcementText[role="link"]{cursor:pointer;text-decoration:none}
+.announcement #announcementText[role="link"]:hover{text-decoration:underline}
+.announcement #announcementText[role="link"]:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:4px}
