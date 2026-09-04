@@ -510,13 +510,15 @@ function renderSettingMenus(items) {
     const isReport = normalizedTitle.includes('รายงานผลการปฏิบัติการ') ||
       normalizedTitle.includes('ผลการปฏิบัติการ') ||
       normalizedTitle === 'report';
-    const href = isCourse
-      ? 'course.html'
-      : (isReward
-          ? 'reward.html'
-          : (isMedia
-              ? 'media.html'
-              : (isInnovation ? 'innovation.html' : '')));
+    const href = isReport
+      ? 'report.html'
+      : (isCourse
+          ? 'course.html'
+          : (isReward
+              ? 'reward.html'
+              : (isMedia
+                  ? 'media.html'
+                  : (isInnovation ? 'innovation.html' : ''))));
     const tag = href ? 'a' : 'div';
     const linkAttrs = href
       ? ` href="${href}" aria-label="เปิดหน้า ${escapeHtml(item.title)}"`
